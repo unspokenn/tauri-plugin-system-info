@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "valibot": "^1.0.0",
-    "@tauri-apps/api": "^2.2.0"
+    "@tauri-apps/api": "^2.4.1"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.2",

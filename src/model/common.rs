@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use std::path::PathBuf;
+use std::{ffi::OsString, path::PathBuf};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub enum DiskKind {
@@ -180,8 +180,8 @@ impl Network {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Component {
-    temperature: f32,
-    max: f32,
+    temperature: Option<f32>,
+    max: Option<f32>,
     critical: Option<f32>,
     label: String,
 }
@@ -204,10 +204,10 @@ pub type Pid = u32;
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Process {
     name: String,
-    cmd: Vec<String>,
+    cmd: Vec<OsString>,
     exe: Option<PathBuf>,
     pid: Pid,
-    environ: Vec<String>,
+    environ: Vec<OsString>,
     cwd: Option<PathBuf>,
     root: Option<PathBuf>,
     memory: u64,
@@ -228,7 +228,7 @@ pub struct Process {
 impl From<&sysinfo::Process> for Process {
     fn from(proc: &sysinfo::Process) -> Self {
         Process {
-            name: proc.name().to_string(),
+            name: format!("{}", proc.name().to_str().unwrap_or("undefined")),
             cmd: proc.cmd().to_vec(),
             exe: proc.exe().map(|exe| exe.into()),
             pid: proc.pid().as_u32(),

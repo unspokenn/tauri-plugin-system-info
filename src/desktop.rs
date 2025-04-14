@@ -1,12 +1,14 @@
+#![allow(dead_code)]
+#![allow(unused_variables)]
+
 use crate::model::{Battery, Component, Cpu, Disk, Network, Process};
 use serde::de::DeserializeOwned;
 use std::sync::Mutex;
 use sysinfo::{
-    Components, CpuRefreshKind, Disks, LoadAvg, Networks, Pid, ProcessRefreshKind, RefreshKind,
-    System,
+    Components, CpuRefreshKind, Disks, LoadAvg, Networks, Pid, ProcessRefreshKind,
+    ProcessesToUpdate, RefreshKind, System,
 };
 use tauri::{plugin::PluginApi, AppHandle, Runtime};
-
 pub fn init<R: Runtime, C: DeserializeOwned>(
     app: &AppHandle<R>,
     _api: PluginApi<R, C>,
@@ -47,13 +49,14 @@ impl SysInfo {
         self.sys.refresh_memory();
     }
     pub fn refresh_cpu(&mut self) {
-        self.sys.refresh_cpu();
+        self.sys.refresh_cpu_list(CpuRefreshKind::everything());
     }
     pub fn refresh_processes(&mut self) {
-        self.sys.refresh_processes();
+        self.sys.refresh_processes(ProcessesToUpdate::All, true);
     }
     pub fn refresh_process(&mut self, pid: Pid) {
-        self.sys.refresh_process(pid);
+        self.sys
+            .refresh_processes(ProcessesToUpdate::Some(&[pid]), true);
     }
     pub fn refresh_specifics(&mut self, refreshes: RefreshKind) {
         self.sys.refresh_specifics(refreshes);
@@ -62,10 +65,12 @@ impl SysInfo {
         self.sys.refresh_cpu_specifics(refresh_kind);
     }
     pub fn refresh_processes_specifics(&mut self, refresh_kind: ProcessRefreshKind) {
-        self.sys.refresh_processes_specifics(refresh_kind);
+        self.sys
+            .refresh_processes_specifics(ProcessesToUpdate::All, true, refresh_kind);
     }
     pub fn refresh_process_specifics(&mut self, pid: Pid, refresh_kind: ProcessRefreshKind) {
-        self.sys.refresh_process_specifics(pid, refresh_kind);
+        self.sys
+            .refresh_processes_specifics(ProcessesToUpdate::Some(&[pid]), true, refresh_kind);
     }
 
     // static info

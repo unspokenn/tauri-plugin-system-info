@@ -49,7 +49,7 @@
           "minimum": 1.0
         },
         "description": {
-          "description": "Human-readable description of what the permission does. Tauri convention is to use <h4> headings in markdown content for Tauri documentation generation purposes.",
+          "description": "Human-readable description of what the permission does. Tauri convention is to use `<h4>` headings in markdown content for Tauri documentation generation purposes.",
           "type": [
             "string",
             "null"
@@ -111,7 +111,7 @@
           "type": "string"
         },
         "description": {
-          "description": "Human-readable description of what the permission does. Tauri internal convention is to use <h4> headings in markdown content for Tauri documentation generation purposes.",
+          "description": "Human-readable description of what the permission does. Tauri internal convention is to use `<h4>` headings in markdown content for Tauri documentation generation purposes.",
           "type": [
             "string",
             "null"
@@ -297,277 +297,332 @@
         {
           "description": "This enables all permissions for system info plugin",
           "type": "string",
-          "const": "allow-all"
+          "const": "allow-all",
+          "markdownDescription": "This enables all permissions for system info plugin"
         },
         {
           "description": "Enables the all_sys_info command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-all-sys-info"
+          "const": "allow-all-sys-info",
+          "markdownDescription": "Enables the all_sys_info command without any pre-configured scope."
         },
         {
           "description": "Denies the all_sys_info command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-all-sys-info"
+          "const": "deny-all-sys-info",
+          "markdownDescription": "Denies the all_sys_info command without any pre-configured scope."
         },
         {
           "description": "Enables the batteries command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-batteries"
+          "const": "allow-batteries",
+          "markdownDescription": "Enables the batteries command without any pre-configured scope."
         },
         {
           "description": "Denies the batteries command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-batteries"
+          "const": "deny-batteries",
+          "markdownDescription": "Denies the batteries command without any pre-configured scope."
         },
         {
           "description": "Enables the components command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-components"
+          "const": "allow-components",
+          "markdownDescription": "Enables the components command without any pre-configured scope."
         },
         {
           "description": "Denies the components command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-components"
+          "const": "deny-components",
+          "markdownDescription": "Denies the components command without any pre-configured scope."
         },
         {
           "description": "Enables the cpu_count command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-cpu-count"
+          "const": "allow-cpu-count",
+          "markdownDescription": "Enables the cpu_count command without any pre-configured scope."
         },
         {
           "description": "Denies the cpu_count command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-cpu-count"
+          "const": "deny-cpu-count",
+          "markdownDescription": "Denies the cpu_count command without any pre-configured scope."
         },
         {
           "description": "Enables the cpu_info command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-cpu-info"
+          "const": "allow-cpu-info",
+          "markdownDescription": "Enables the cpu_info command without any pre-configured scope."
         },
         {
           "description": "Denies the cpu_info command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-cpu-info"
+          "const": "deny-cpu-info",
+          "markdownDescription": "Denies the cpu_info command without any pre-configured scope."
         },
         {
           "description": "Enables the cpus command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-cpus"
+          "const": "allow-cpus",
+          "markdownDescription": "Enables the cpus command without any pre-configured scope."
         },
         {
           "description": "Denies the cpus command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-cpus"
+          "const": "deny-cpus",
+          "markdownDescription": "Denies the cpus command without any pre-configured scope."
         },
         {
           "description": "Enables the disks command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-disks"
+          "const": "allow-disks",
+          "markdownDescription": "Enables the disks command without any pre-configured scope."
         },
         {
           "description": "Denies the disks command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-disks"
+          "const": "deny-disks",
+          "markdownDescription": "Denies the disks command without any pre-configured scope."
         },
         {
           "description": "Enables the execute command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-execute"
+          "const": "allow-execute",
+          "markdownDescription": "Enables the execute command without any pre-configured scope."
         },
         {
           "description": "Denies the execute command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-execute"
+          "const": "deny-execute",
+          "markdownDescription": "Denies the execute command without any pre-configured scope."
         },
         {
           "description": "Enables the hostname command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-hostname"
+          "const": "allow-hostname",
+          "markdownDescription": "Enables the hostname command without any pre-configured scope."
         },
         {
           "description": "Denies the hostname command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-hostname"
+          "const": "deny-hostname",
+          "markdownDescription": "Denies the hostname command without any pre-configured scope."
         },
         {
           "description": "Enables the kernel_version command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-kernel-version"
+          "const": "allow-kernel-version",
+          "markdownDescription": "Enables the kernel_version command without any pre-configured scope."
         },
         {
           "description": "Denies the kernel_version command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-kernel-version"
+          "const": "deny-kernel-version",
+          "markdownDescription": "Denies the kernel_version command without any pre-configured scope."
         },
         {
           "description": "Enables the load_average command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-load-average"
+          "const": "allow-load-average",
+          "markdownDescription": "Enables the load_average command without any pre-configured scope."
         },
         {
           "description": "Denies the load_average command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-load-average"
+          "const": "deny-load-average",
+          "markdownDescription": "Denies the load_average command without any pre-configured scope."
         },
         {
           "description": "Enables the memory_info command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-memory-info"
+          "const": "allow-memory-info",
+          "markdownDescription": "Enables the memory_info command without any pre-configured scope."
         },
         {
           "description": "Denies the memory_info command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-memory-info"
+          "const": "deny-memory-info",
+          "markdownDescription": "Denies the memory_info command without any pre-configured scope."
         },
         {
           "description": "Enables the name command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-name"
+          "const": "allow-name",
+          "markdownDescription": "Enables the name command without any pre-configured scope."
         },
         {
           "description": "Denies the name command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-name"
+          "const": "deny-name",
+          "markdownDescription": "Denies the name command without any pre-configured scope."
         },
         {
           "description": "Enables the networks command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-networks"
+          "const": "allow-networks",
+          "markdownDescription": "Enables the networks command without any pre-configured scope."
         },
         {
           "description": "Denies the networks command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-networks"
+          "const": "deny-networks",
+          "markdownDescription": "Denies the networks command without any pre-configured scope."
         },
         {
           "description": "Enables the os_version command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-os-version"
+          "const": "allow-os-version",
+          "markdownDescription": "Enables the os_version command without any pre-configured scope."
         },
         {
           "description": "Denies the os_version command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-os-version"
+          "const": "deny-os-version",
+          "markdownDescription": "Denies the os_version command without any pre-configured scope."
         },
         {
           "description": "Enables the ping command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-ping"
+          "const": "allow-ping",
+          "markdownDescription": "Enables the ping command without any pre-configured scope."
         },
         {
           "description": "Denies the ping command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-ping"
+          "const": "deny-ping",
+          "markdownDescription": "Denies the ping command without any pre-configured scope."
         },
         {
           "description": "Enables the processes command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-processes"
+          "const": "allow-processes",
+          "markdownDescription": "Enables the processes command without any pre-configured scope."
         },
         {
           "description": "Denies the processes command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-processes"
+          "const": "deny-processes",
+          "markdownDescription": "Denies the processes command without any pre-configured scope."
         },
         {
           "description": "Enables the refresh_all command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-refresh-all"
+          "const": "allow-refresh-all",
+          "markdownDescription": "Enables the refresh_all command without any pre-configured scope."
         },
         {
           "description": "Denies the refresh_all command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-refresh-all"
+          "const": "deny-refresh-all",
+          "markdownDescription": "Denies the refresh_all command without any pre-configured scope."
         },
         {
           "description": "Enables the refresh_cpu command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-refresh-cpu"
+          "const": "allow-refresh-cpu",
+          "markdownDescription": "Enables the refresh_cpu command without any pre-configured scope."
         },
         {
           "description": "Denies the refresh_cpu command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-refresh-cpu"
+          "const": "deny-refresh-cpu",
+          "markdownDescription": "Denies the refresh_cpu command without any pre-configured scope."
         },
         {
           "description": "Enables the refresh_memory command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-refresh-memory"
+          "const": "allow-refresh-memory",
+          "markdownDescription": "Enables the refresh_memory command without any pre-configured scope."
         },
         {
           "description": "Denies the refresh_memory command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-refresh-memory"
+          "const": "deny-refresh-memory",
+          "markdownDescription": "Denies the refresh_memory command without any pre-configured scope."
         },
         {
           "description": "Enables the refresh_processes command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-refresh-processes"
+          "const": "allow-refresh-processes",
+          "markdownDescription": "Enables the refresh_processes command without any pre-configured scope."
         },
         {
           "description": "Denies the refresh_processes command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-refresh-processes"
+          "const": "deny-refresh-processes",
+          "markdownDescription": "Denies the refresh_processes command without any pre-configured scope."
         },
         {
           "description": "Enables the static_info command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-static-info"
+          "const": "allow-static-info",
+          "markdownDescription": "Enables the static_info command without any pre-configured scope."
         },
         {
           "description": "Denies the static_info command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-static-info"
+          "const": "deny-static-info",
+          "markdownDescription": "Denies the static_info command without any pre-configured scope."
         },
         {
           "description": "Enables the total_memory command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-total-memory"
+          "const": "allow-total-memory",
+          "markdownDescription": "Enables the total_memory command without any pre-configured scope."
         },
         {
           "description": "Denies the total_memory command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-total-memory"
+          "const": "deny-total-memory",
+          "markdownDescription": "Denies the total_memory command without any pre-configured scope."
         },
         {
           "description": "Enables the total_swap command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-total-swap"
+          "const": "allow-total-swap",
+          "markdownDescription": "Enables the total_swap command without any pre-configured scope."
         },
         {
           "description": "Denies the total_swap command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-total-swap"
+          "const": "deny-total-swap",
+          "markdownDescription": "Denies the total_swap command without any pre-configured scope."
         },
         {
           "description": "Enables the uptime command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-uptime"
+          "const": "allow-uptime",
+          "markdownDescription": "Enables the uptime command without any pre-configured scope."
         },
         {
           "description": "Denies the uptime command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-uptime"
+          "const": "deny-uptime",
+          "markdownDescription": "Denies the uptime command without any pre-configured scope."
         },
         {
           "description": "Enables the used_memory command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-used-memory"
+          "const": "allow-used-memory",
+          "markdownDescription": "Enables the used_memory command without any pre-configured scope."
         },
         {
           "description": "Denies the used_memory command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-used-memory"
+          "const": "deny-used-memory",
+          "markdownDescription": "Denies the used_memory command without any pre-configured scope."
         },
         {
           "description": "Enables the used_swap command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-used-swap"
+          "const": "allow-used-swap",
+          "markdownDescription": "Enables the used_swap command without any pre-configured scope."
         },
         {
           "description": "Denies the used_swap command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-used-swap"
+          "const": "deny-used-swap",
+          "markdownDescription": "Denies the used_swap command without any pre-configured scope."
         }
       ]
     }

@@ -1,9 +1,9 @@
 [package]
 name = "tauri-plugin-system-info"
-version = "2.0.9"
+version = "2.1.0"
 authors = ["Huakun"]
 edition = "2021"
-rust-version = "1.70"
+rust-version = "1.85"
 exclude = ["/examples", "/dist-js", "/guest-js", "/node_modules"]
 links = "tauri-plugin-system-info"
 description = "A tauri plugin for retrieving system info"
@@ -15,12 +15,12 @@ rustc-args = ["--cfg", "docsrs"]
 rustdoc-args = ["--cfg", "docsrs"]
 
 [dependencies]
-tauri = { version = "2.0.1" }
+tauri = { version = "2.4.1" }
 serde = "1.0"
 thiserror = "1.0"
-sysinfo = { version = "0.30.13" }
-starship-battery = "0.8.2"
-uom = { version = "0.35.0", features = ["serde"] }
+sysinfo = { version = "0.34.2" }
+starship-battery = "0.10.1"
+uom = { version = "0.36.0", features = ["serde"] }
 
 [build-dependencies]
-tauri-plugin = { version = "2.0.1", features = ["build"] }
+tauri-plugin = { version = "2", features = ["build"] }
